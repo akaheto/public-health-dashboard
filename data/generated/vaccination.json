@@ -616,5 +616,352 @@
         "asOf": "2024-11-30"
       }
     ]
+  },
+  "dtapNis": {
+    "disease": "measles",
+    "signal": "nis_dtap",
+    "source": "CDC NIS",
+    "unit": "% with ≥4 DTaP doses by 24mo (NIS survey)",
+    "asOf": "",
+    "states": []
+  },
+  "polioNis": {
+    "disease": "measles",
+    "signal": "nis_polio",
+    "source": "CDC NIS",
+    "unit": "% with ≥3 polio doses by 24mo (NIS survey)",
+    "asOf": "",
+    "states": []
+  },
+  "hepbNis": {
+    "disease": "measles",
+    "signal": "nis_hepb",
+    "source": "CDC NIS",
+    "unit": "% with ≥3 hepatitis B doses by 24mo (NIS survey)",
+    "asOf": "",
+    "states": []
+  },
+  "varicellaVaxNis": {
+    "disease": "measles",
+    "signal": "nis_varicella",
+    "source": "CDC NIS",
+    "unit": "% with ≥1 varicella dose by 24mo (NIS survey)",
+    "asOf": "2024-11-30",
+    "states": [
+      {
+        "stateFips": "01",
+        "stateName": "Alabama",
+        "value": 88,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "02",
+        "stateName": "Alaska",
+        "value": 83,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "04",
+        "stateName": "Arizona",
+        "value": 92.8,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "05",
+        "stateName": "Arkansas",
+        "value": 90.5,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "06",
+        "stateName": "California",
+        "value": 90.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "08",
+        "stateName": "Colorado",
+        "value": 93.6,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "09",
+        "stateName": "Connecticut",
+        "value": 94.5,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "10",
+        "stateName": "Delaware",
+        "value": 98.5,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "11",
+        "stateName": "District of Columbia",
+        "value": 85.4,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "12",
+        "stateName": "Florida",
+        "value": 95.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "13",
+        "stateName": "Georgia",
+        "value": 91.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "15",
+        "stateName": "Hawaii",
+        "value": 90.4,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "16",
+        "stateName": "Idaho",
+        "value": 89,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "17",
+        "stateName": "Illinois",
+        "value": 95.3,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "18",
+        "stateName": "Indiana",
+        "value": 89.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "19",
+        "stateName": "Iowa",
+        "value": 95.8,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "20",
+        "stateName": "Kansas",
+        "value": 90.3,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "21",
+        "stateName": "Kentucky",
+        "value": 94.8,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "22",
+        "stateName": "Louisiana",
+        "value": 91.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "23",
+        "stateName": "Maine",
+        "value": 94.7,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "24",
+        "stateName": "Maryland",
+        "value": 97.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "25",
+        "stateName": "Massachusetts",
+        "value": 97.5,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "26",
+        "stateName": "Michigan",
+        "value": 95,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "27",
+        "stateName": "Minnesota",
+        "value": 92.6,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "28",
+        "stateName": "Mississippi",
+        "value": 86.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "29",
+        "stateName": "Missouri",
+        "value": 91.1,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "30",
+        "stateName": "Montana",
+        "value": 85.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "31",
+        "stateName": "Nebraska",
+        "value": 97.8,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "32",
+        "stateName": "Nevada",
+        "value": 95.5,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "33",
+        "stateName": "New Hampshire",
+        "value": 98.8,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "34",
+        "stateName": "New Jersey",
+        "value": 95.6,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "35",
+        "stateName": "New Mexico",
+        "value": 91.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "36",
+        "stateName": "New York",
+        "value": 94.1,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "37",
+        "stateName": "North Carolina",
+        "value": 96.1,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "38",
+        "stateName": "North Dakota",
+        "value": 88.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "39",
+        "stateName": "Ohio",
+        "value": 92.4,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "40",
+        "stateName": "Oklahoma",
+        "value": 87.3,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "41",
+        "stateName": "Oregon",
+        "value": 95.9,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "42",
+        "stateName": "Pennsylvania",
+        "value": 91.3,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "44",
+        "stateName": "Rhode Island",
+        "value": 98.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "45",
+        "stateName": "South Carolina",
+        "value": 96.3,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "46",
+        "stateName": "South Dakota",
+        "value": 92,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "47",
+        "stateName": "Tennessee",
+        "value": 93.6,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "48",
+        "stateName": "Texas",
+        "value": 94.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "49",
+        "stateName": "Utah",
+        "value": 91.4,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "50",
+        "stateName": "Vermont",
+        "value": 97.3,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "51",
+        "stateName": "Virginia",
+        "value": 94,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "53",
+        "stateName": "Washington",
+        "value": 93.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "54",
+        "stateName": "West Virginia",
+        "value": 95.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "55",
+        "stateName": "Wisconsin",
+        "value": 89.2,
+        "asOf": "2024-11-30"
+      },
+      {
+        "stateFips": "56",
+        "stateName": "Wyoming",
+        "value": 88.8,
+        "asOf": "2024-11-30"
+      }
+    ]
+  },
+  "combined7Nis": {
+    "disease": "measles",
+    "signal": "nis_combined7",
+    "source": "CDC NIS",
+    "unit": "% with Combined 7-vaccine series by 24mo (NIS survey)",
+    "asOf": "",
+    "states": []
   }
 }

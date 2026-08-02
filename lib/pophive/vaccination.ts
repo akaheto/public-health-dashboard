@@ -68,36 +68,60 @@ export async function buildMmrHealthmapSeries(): Promise<SignalSeries> {
   };
 }
 
-export async function buildMmrNisSeries(): Promise<SignalSeries> {
-  const rows = await queryParquet<NisRow>(NIS_BUNDLE, (url) =>
+function buildNisSeries(vaccineLabel: string, vaccineName: string, unit: string): Promise<SignalSeries> {
+  return queryParquet<NisRow>(NIS_BUNDLE, (url) =>
     `SELECT geography, CAST(time AS VARCHAR) AS time, pct_uptake, vaccine
      FROM read_parquet('${url}')
-     WHERE vaccine = '≥1 Dose MMR'
-       AND time = (SELECT max(time) FROM read_parquet('${url}') WHERE vaccine = '≥1 Dose MMR')
+     WHERE vaccine = '${vaccineLabel}'
+       AND time = (SELECT max(time) FROM read_parquet('${url}') WHERE vaccine = '${vaccineLabel}')
      ORDER BY geography`
-  );
+  ).then((rows) => {
+    const states: StateDatum[] = [];
+    let maxAsOf = "";
+    for (const r of rows) {
+      if (r.geography === "00" || r.pct_uptake == null) continue;
+      const name = STATE_NAME_BY_FIPS[r.geography];
+      if (!name) continue;
+      states.push({
+        stateFips: r.geography,
+        stateName: name,
+        value: r.pct_uptake,
+        asOf: r.time,
+      });
+      if (r.time > maxAsOf) maxAsOf = r.time;
+    }
 
-  const states: StateDatum[] = [];
-  let maxAsOf = "";
-  for (const r of rows) {
-    if (r.geography === "00" || r.pct_uptake == null) continue; // "00" = national aggregate
-    const name = STATE_NAME_BY_FIPS[r.geography];
-    if (!name) continue; // territory or unrecognized FIPS, not a US state
-    states.push({
-      stateFips: r.geography,
-      stateName: name,
-      value: r.pct_uptake,
-      asOf: r.time,
-    });
-    if (r.time > maxAsOf) maxAsOf = r.time;
-  }
+    return {
+      disease: "measles",
+      signal: `nis_${vaccineName}`,
+      source: "CDC NIS",
+      unit,
+      asOf: maxAsOf,
+      states,
+    };
+  });
+}
 
-  return {
-    disease: "measles",
-    signal: "nis_mmr",
-    source: "CDC NIS",
-    unit: "% with ≥1 MMR dose by 24mo (NIS survey)",
-    asOf: maxAsOf,
-    states,
-  };
+export async function buildMmrNisSeries(): Promise<SignalSeries> {
+  return buildNisSeries("≥1 Dose MMR", "mmr", "% with ≥1 MMR dose by 24mo (NIS survey)");
+}
+
+export async function buildDtapNisSeries(): Promise<SignalSeries> {
+  return buildNisSeries("≥4 Doses DTaP", "dtap", "% with ≥4 DTaP doses by 24mo (NIS survey)");
+}
+
+export async function buildPolioNisSeries(): Promise<SignalSeries> {
+  return buildNisSeries("≥3 Doses Polio", "polio", "% with ≥3 polio doses by 24mo (NIS survey)");
+}
+
+export async function buildHepbNisSeries(): Promise<SignalSeries> {
+  return buildNisSeries("≥3 Doses HepB", "hepb", "% with ≥3 hepatitis B doses by 24mo (NIS survey)");
+}
+
+export async function buildVaricellaVaxNisSeries(): Promise<SignalSeries> {
+  return buildNisSeries("≥1 Dose Varicella", "varicella", "% with ≥1 varicella dose by 24mo (NIS survey)");
+}
+
+export async function buildCombined7SeriesNisSeries(): Promise<SignalSeries> {
+  return buildNisSeries("4:3:1:3:3:1:4", "combined7", "% with Combined 7-vaccine series by 24mo (NIS survey)");
 }

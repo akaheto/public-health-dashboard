@@ -15,7 +15,15 @@ import {
   buildMeaslesCumulativeSeries,
 } from "../lib/pophive/measles";
 import { buildCountySeries } from "../lib/pophive/countyEdVisits";
-import { buildMmrHealthmapSeries, buildMmrNisSeries } from "../lib/pophive/vaccination";
+import {
+  buildMmrHealthmapSeries,
+  buildMmrNisSeries,
+  buildDtapNisSeries,
+  buildPolioNisSeries,
+  buildHepbNisSeries,
+  buildVaricellaVaxNisSeries,
+  buildCombined7SeriesNisSeries,
+} from "../lib/pophive/vaccination";
 import {
   buildDiabetesSeries,
   buildObesitySeries,
@@ -127,16 +135,26 @@ async function main() {
   }
   await writeFile(path.join(OUT_DIR, "counties.json"), JSON.stringify(counties, null, 2));
 
-  console.log("\nBuilding vaccination-coverage series (MMR)...");
-  const [mmrHealthmap, mmrNis] = await Promise.all([
+  console.log("\nBuilding vaccination-coverage series...");
+  const [mmrHealthmap, mmrNis, dtapNis, polioNis, hepbNis, varicellaVaxNis, combined7Nis] = await Promise.all([
     buildMmrHealthmapSeries(),
     buildMmrNisSeries(),
+    buildDtapNisSeries(),
+    buildPolioNisSeries(),
+    buildHepbNisSeries(),
+    buildVaricellaVaxNisSeries(),
+    buildCombined7SeriesNisSeries(),
   ]);
-  const vaccination = { mmrHealthmap, mmrNis };
+  const vaccination = { mmrHealthmap, mmrNis, dtapNis, polioNis, hepbNis, varicellaVaxNis, combined7Nis };
   console.log(
     `  MMR (HealthMap): ${mmrHealthmap.states.length} states, as of ${mmrHealthmap.asOf}`
   );
   console.log(`  MMR (NIS): ${mmrNis.states.length} states, as of ${mmrNis.asOf}`);
+  console.log(`  DTaP (NIS): ${dtapNis.states.length} states, as of ${dtapNis.asOf}`);
+  console.log(`  Polio (NIS): ${polioNis.states.length} states, as of ${polioNis.asOf}`);
+  console.log(`  Hepatitis B (NIS): ${hepbNis.states.length} states, as of ${hepbNis.asOf}`);
+  console.log(`  Varicella (NIS): ${varicellaVaxNis.states.length} states, as of ${varicellaVaxNis.asOf}`);
+  console.log(`  Combined 7-series (NIS): ${combined7Nis.states.length} states, as of ${combined7Nis.asOf}`);
   await writeFile(
     path.join(OUT_DIR, "vaccination.json"),
     JSON.stringify(vaccination, null, 2)
