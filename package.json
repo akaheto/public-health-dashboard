@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build:data": "tsx scripts/build-data.ts",
-    "prebuild": "npm run build:data",
     "build": "next build",
+    "build:full": "npm run build:data && npm run build",
     "start": "next start",
     "lint": "eslint"
   },
