@@ -1,8 +1,11 @@
 // Health Data Query API
 // Query processed CDC/health datasets by category, geography, and more
 
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import statesData from "@/data/generated/states.json";
+import chronicData from "@/data/generated/chronic.json";
+import overviewData from "@/data/generated/overview.json";
+import vaccinationData from "@/data/generated/vaccination.json";
+import countiesData from "@/data/generated/counties.json";
 
 export const runtime = "nodejs";
 
@@ -46,14 +49,15 @@ function parseParams(searchParams: URLSearchParams): QueryParams {
 }
 
 // Load processed dataset file
-async function loadDataset(filename: string): Promise<Record<string, unknown> | null> {
-  try {
-    const filepath = path.join(process.cwd(), "data", "generated", filename);
-    const data = await readFile(filepath, "utf-8");
-    return JSON.parse(data);
-  } catch (err) {
-    return null;
-  }
+function loadDataset(filename: string): Record<string, unknown> | null {
+  const datasets: Record<string, Record<string, unknown>> = {
+    "states.json": statesData as Record<string, unknown>,
+    "chronic.json": chronicData as Record<string, unknown>,
+    "overview.json": overviewData as Record<string, unknown>,
+    "vaccination.json": vaccinationData as Record<string, unknown>,
+    "counties.json": countiesData as Record<string, unknown>,
+  };
+  return datasets[filename] || null;
 }
 
 // Extract state data from processed JSON structure and flatten into array
@@ -174,7 +178,7 @@ export async function GET(request: Request): Promise<Response> {
     }
 
     // Load processed dataset
-    const rawData = await loadDataset(datasetConfig.file);
+    const rawData = loadDataset(datasetConfig.file);
     if (!rawData) {
       return Response.json(
         { success: false, error: `Could not load dataset: ${params.dataset}` },
