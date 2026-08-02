@@ -4,6 +4,9 @@ import { useMemo, useState } from "react";
 import { Choropleth, type MapDatum } from "./Choropleth";
 import { OverviewStrip } from "./OverviewStrip";
 import { ChronicDiseasePanel, type ChronicDiseasePanelProps } from "./ChronicDiseasePanel";
+import CDCDataExplorer from "./CDCDataExplorer";
+import StateAssessment from "./StateAssessment";
+import DiseaseProgression from "./DiseaseProgression";
 import type {
   OverviewCard,
   MeaslesOverviewCard,
@@ -132,7 +135,8 @@ export function Dashboard({
   vaccination,
   chronic,
 }: DashboardProps) {
-  const [mainTab, setMainTab] = useState<"outbreak" | "chronic">("outbreak");
+  const [mainTab, setMainTab] = useState<"outbreak" | "chronic" | "cdc">("outbreak");
+  const [cdcTab, setCdcTab] = useState<"explorer" | "assessment" | "progression">("explorer");
   const [disease, setDisease] = useState<Disease>("flu");
   const [respiratorySignal, setRespiratorySignal] = useState<Signal>("CDC NSSP");
   const [measlesSignal, setMeaslesSignal] =
@@ -247,9 +251,49 @@ export function Dashboard({
         >
           Chronic Disease &amp; Behavioral Health
         </button>
+        <button
+          onClick={() => setMainTab("cdc")}
+          className="rounded-md px-3 py-1.5 text-sm font-medium"
+          style={{
+            background: mainTab === "cdc" ? "var(--color-focus)" : "transparent",
+            color: mainTab === "cdc" ? "white" : "var(--color-text-secondary)",
+          }}
+        >
+          CDC Dashboard
+        </button>
       </div>
 
-      {mainTab === "chronic" ? (
+      {mainTab === "cdc" ? (
+        <>
+          {/* CDC Dashboard Subtabs */}
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm mb-6 border border-gray-200 dark:border-gray-700">
+            <div className="flex border-b border-gray-200 dark:border-gray-700">
+              {[
+                { id: "explorer", label: "📊 Data Explorer", icon: "📊" },
+                { id: "assessment", label: "🏥 State Assessment", icon: "🏥" },
+                { id: "progression", label: "📈 Disease Progression", icon: "📈" },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setCdcTab(tab.id as typeof cdcTab)}
+                  className={`flex-1 px-6 py-4 font-semibold text-center transition-colors ${
+                    cdcTab === tab.id
+                      ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400"
+                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+            <div className="p-6">
+              {cdcTab === "explorer" && <CDCDataExplorer />}
+              {cdcTab === "assessment" && <StateAssessment />}
+              {cdcTab === "progression" && <DiseaseProgression />}
+            </div>
+          </div>
+        </>
+      ) : mainTab === "chronic" ? (
         chronic.diabetes ? (
           <ChronicDiseasePanel {...(chronic as Required<typeof chronic>)} />
         ) : (
