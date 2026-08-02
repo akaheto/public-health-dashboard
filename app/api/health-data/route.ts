@@ -60,33 +60,54 @@ async function loadDataset(filename: string): Promise<Record<string, unknown> | 
 function extractStatesFromProcessedData(data: Record<string, unknown>, disease?: string): StateData[] {
   const result: StateData[] = [];
 
+  // Helper function to find states array in a nested structure
+  function findStatesArray(obj: Record<string, unknown>): Array<Record<string, unknown>> | null {
+    // Check if object itself has states array (chronic.json style)
+    if ("states" in obj) {
+      return obj.states as Array<Record<string, unknown>>;
+    }
+    // Check nested objects (states.json style)
+    for (const value of Object.values(obj)) {
+      if (typeof value === "object" && value !== null) {
+        const nested = value as Record<string, unknown>;
+        if ("states" in nested) {
+          return nested.states as Array<Record<string, unknown>>;
+        }
+      }
+    }
+    return null;
+  }
+
   if (disease && disease in data) {
     const diseaseData = data[disease] as Record<string, unknown>;
-    if (diseaseData && "states" in diseaseData) {
-      const states = diseaseData.states as Array<Record<string, unknown>>;
-      states.forEach((state) => {
-        result.push({
-          disease,
-          state: (state.stateName as string) || "",
-          value: state.value as number,
-          ...state,
-        });
-      });
-    }
-  } else {
-    // No specific disease, extract all diseases
-    Object.entries(data).forEach(([key, value]) => {
-      if (typeof value === "object" && value !== null && "states" in value) {
-        const diseaseData = value as Record<string, unknown>;
-        const states = diseaseData.states as Array<Record<string, unknown>>;
+    if (diseaseData) {
+      const states = findStatesArray(diseaseData);
+      if (states) {
         states.forEach((state) => {
           result.push({
-            disease: key,
+            disease,
             state: (state.stateName as string) || "",
             value: state.value as number,
             ...state,
           });
         });
+      }
+    }
+  } else {
+    // No specific disease, extract all diseases
+    Object.entries(data).forEach(([key, value]) => {
+      if (typeof value === "object" && value !== null) {
+        const states = findStatesArray(value as Record<string, unknown>);
+        if (states) {
+          states.forEach((state) => {
+            result.push({
+              disease: key,
+              state: (state.stateName as string) || "",
+              value: state.value as number,
+              ...state,
+            });
+          });
+        }
       }
     });
   }
@@ -115,12 +136,12 @@ export async function GET(request: Request): Promise<Response> {
     // Dataset mapping to processed data files
     const datasets: Record<string, { file: string; disease?: string }> = {
       "epidemic-trends": { file: "states.json", disease: "flu" },
-      "nssp-ed-respiratory": { file: "states.json", disease: "nssp_ed_respiratory_visits" },
-      "ari-activity-level": { file: "states.json", disease: "ari_activity_level" },
-      "chronic-disease-indicators": { file: "chronic.json", disease: "diabetes" },
+      "nssp-ed-respiratory": { file: "states.json" },
+      "ari-activity-level": { file: "states.json" },
+      "chronic-disease-indicators": { file: "chronic.json" },
       "brfss-historical": { file: "chronic.json" },
-      "drug-poisoning-mortality": { file: "states.json", disease: "drug_poisoning_mortality" },
-      "tbi-ed-visits": { file: "states.json", disease: "tbi_ed_visits" },
+      "drug-poisoning-mortality": { file: "states.json" },
+      "tbi-ed-visits": { file: "states.json" },
       "influenza-pneumonia-deaths": { file: "states.json", disease: "flu" },
       "anxiety-depression": { file: "chronic.json" },
       "mental-health-care": { file: "chronic.json" },
