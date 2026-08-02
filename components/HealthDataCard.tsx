@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import CDCDataModal from "./CDCDataModal";
 
 interface HealthDataItem {
   date?: string;
@@ -37,6 +38,7 @@ export default function HealthDataCard({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,52 +72,70 @@ export default function HealthDataCard({
     fetchData();
   }, [datasetId]);
 
+  const stats = data && data.length > 0 ? {
+    avg: (data.reduce((sum, item) => sum + (item.value ?? 0), 0) / data.length).toFixed(1),
+    max: Math.max(...data.map((item) => item.value ?? -Infinity)).toFixed(1),
+    min: Math.min(...data.map((item) => item.value ?? Infinity)).toFixed(1),
+  } : null;
+
   return (
-    <div
-      className={`border-l-4 rounded-lg p-4 ${colorMap[color]}`}
-      style={{
-        borderLeftColor: color === "red" ? "#ef4444" :
-                        color === "orange" ? "#f97316" :
-                        color === "amber" ? "#f59e0b" :
-                        color === "green" ? "#22c55e" :
-                        color === "blue" ? "#3b82f6" :
-                        "#a855f7",
-      }}
-    >
-      <div className="mb-3">
-        <h3 className="font-semibold text-lg">{title}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+    <>
+      <div
+        onClick={() => data && data.length > 0 && setShowModal(true)}
+        className={`border-l-4 rounded-lg p-4 ${colorMap[color]} ${
+          data && data.length > 0 ? "cursor-pointer hover:shadow-lg transition-shadow" : ""
+        }`}
+        style={{
+          borderLeftColor: color === "red" ? "#ef4444" :
+                          color === "orange" ? "#f97316" :
+                          color === "amber" ? "#f59e0b" :
+                          color === "green" ? "#22c55e" :
+                          color === "blue" ? "#3b82f6" :
+                          "#a855f7",
+        }}
+      >
+        <div className="mb-3">
+          <h3 className="font-semibold text-lg">{title}</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+        </div>
+
+        {loading ? (
+          <div className="text-sm text-gray-500">Loading data...</div>
+        ) : error ? (
+          <div className="text-sm text-gray-500">Data not available in this environment</div>
+        ) : data && data.length > 0 && stats ? (
+          <div className="space-y-3">
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Average</p>
+                <p className="text-lg font-bold">{stats.avg}</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Low</p>
+                <p className="text-lg font-bold">{stats.min}</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-600 dark:text-gray-400">High</p>
+                <p className="text-lg font-bold">{stats.max}</p>
+              </div>
+            </div>
+            <p className="text-xs text-center text-blue-600 dark:text-blue-400 font-semibold">
+              Click to explore all 50 states →
+            </p>
+          </div>
+        ) : (
+          <div className="text-sm text-gray-500">No data available</div>
+        )}
       </div>
 
-      {loading ? (
-        <div className="text-sm text-gray-500">Loading data...</div>
-      ) : error ? (
-        <div className="text-sm text-gray-500">Data not available in this environment</div>
-      ) : data && data.length > 0 ? (
-        <div className="space-y-2">
-          {data.slice(0, 3).map((item, idx) => (
-            <div key={idx} className="text-sm flex justify-between items-center">
-              <span className="text-gray-700 dark:text-gray-300">
-                {String(item.state || item.disease || item.category || "Data")}
-              </span>
-              {item.value && (
-                <span className="font-mono font-semibold">
-                  {typeof item.value === "number"
-                    ? item.value.toFixed(1)
-                    : String(item.value)}
-                </span>
-              )}
-            </div>
-          ))}
-          {lastUpdated && (
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 pt-2 border-t border-gray-200 dark:border-gray-700">
-              Last updated: {lastUpdated}
-            </p>
-          )}
-        </div>
-      ) : (
-        <div className="text-sm text-gray-500">No data available</div>
+      {showModal && (
+        <CDCDataModal
+          datasetId={datasetId}
+          title={title}
+          color={color}
+          onClose={() => setShowModal(false)}
+        />
       )}
-    </div>
+    </>
   );
 }
