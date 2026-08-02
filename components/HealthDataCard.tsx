@@ -90,7 +90,7 @@ export default function HealthDataCard({
       {loading ? (
         <div className="text-sm text-gray-500">Loading data...</div>
       ) : error ? (
-        <div className="text-sm text-red-600 dark:text-red-400">{error}</div>
+        <div className="text-sm text-gray-500">Data not available in this environment</div>
       ) : data && data.length > 0 ? (
         <div className="space-y-2">
           {data.slice(0, 3).map((item, idx) => (
