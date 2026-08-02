@@ -1,4 +1,4 @@
 # Vercel deployment ignore
-# Data files are regenerated during build, exclude to stay under file limits
-data/generated/
+# Exclude large CDC raw data files, but include processed dashboard data
+data/generated/cdc-*.json
 data/archive/
