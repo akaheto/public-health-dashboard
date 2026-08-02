@@ -932,6 +932,1044 @@
           "asOf": "2026-07-25"
         }
       ]
+    },
+    "CDC RespNET": {
+      "disease": "flu",
+      "signal": "CDC RespNET",
+      "source": "CDC RespNET",
+      "unit": "lab-confirmed hospitalizations per 100,000",
+      "asOf": "2026-07-25",
+      "states": [
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0,
+          "asOf": "2026-07-25"
+        }
+      ]
+    },
+    "CDC ILINet": {
+      "disease": "flu",
+      "signal": "CDC ILINet",
+      "source": "CDC ILINet",
+      "unit": "% of outpatient visits (ILI)",
+      "asOf": "2026-07-18",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 0.726053,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "02",
+          "stateName": "Alaska",
+          "value": 0,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 0.724136,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 0.677507,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 1.29454,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.71894,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 1.42087,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 0.253609,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "11",
+          "stateName": "District of Columbia",
+          "value": 1.30002,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 1.30862,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.930946,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 2.25834,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 0.81826,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 0.44819,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 0.64986,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 0.0548396,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 0.600546,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 0.284544,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 0.749554,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 0.269621,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0.802196,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 0.622309,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0.419508,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0.424042,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 0.822356,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 0.441102,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 0.140056,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 0.395828,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 0.829637,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 0.281656,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 1.97788,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0.668724,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 2.3807522784999255,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0.52367,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 0.120641,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 0.877056,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 0.621434,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 1.22032,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 0.417633,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 0.532204,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 1.12402,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 0.609189,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.743286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 1.00677,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0.183419,
+          "asOf": "2025-09-27"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 0.755709,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 0.820276,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 0.437853,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 0.714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 0.285686,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 0.673149,
+          "asOf": "2026-07-18"
+        }
+      ]
+    },
+    "Epic Cosmos, ED": {
+      "disease": "flu",
+      "signal": "Epic Cosmos, ED",
+      "source": "Epic Cosmos, ED",
+      "unit": "% of ED visits (Epic Cosmos)",
+      "asOf": "2026-07-18",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 15.151515151515152,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 27.77777777777778,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 2.717391304347826,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 6.410256410256411,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 8.928571428571429,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 23.80952380952381,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "11",
+          "stateName": "District of Columbia",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 1.8726591760299625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 4.545454545454546,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 11.363636363636363,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 29.41176470588235,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 5.555555555555555,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 13.157894736842104,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 14.285714285714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 17.857142857142858,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 19.23076923076923,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 14.285714285714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 15.625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 5.813953488372093,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 5.4945054945054945,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 10.416666666666666,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 27.77777777777778,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 41.666666666666664,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 41.666666666666664,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 8.620689655172415,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 31.25,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 2.6595744680851063,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 4,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 3.1055900621118013,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 13.88888888888889,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 16.666666666666668,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 3.5714285714285716,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 7.042253521126761,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 2.6041666666666665,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 5,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 38.46153846153846,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 4.3478260869565215,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 15.625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 100,
+          "asOf": "2026-07-18"
+        }
+      ]
+    },
+    "Delphi Hospital Claims": {
+      "disease": "flu",
+      "signal": "Delphi Hospital Claims",
+      "source": "Delphi Hospital Claims",
+      "unit": "% of new hospital admissions",
+      "asOf": "2026-05-30",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 0.085561,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 0.206465,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 0.085718,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0.082604,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.082097,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 0.079886,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 0.172488,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 0.053669,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.06453,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 0.124698,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 0.164866,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 0.076786,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 0.074271,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 0.097663,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 0.207547,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 0.149073,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 0.084722,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 0.303479,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0.087195,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 0.08822,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0.091162,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0.089243,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 0.087484,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 0.072824,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 0.380243,
+          "asOf": "2026-05-02"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 0.303999,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 0.084655,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 0.271705,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 0.084139,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0.151657,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0.064747,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0.077503,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 0.437625,
+          "asOf": "2026-02-14"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 0.066298,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 0.079742,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0.360517,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 0.072949,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 0.276897,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 0.074369,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 0.353445,
+          "asOf": "2026-05-02"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.075315,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 0.069824,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0.125962,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 0.47059,
+          "asOf": "2026-05-02"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 0.068232,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 0.087075,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 0.227407,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 0.087627,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 0.487207,
+          "asOf": "2026-05-09"
+        }
+      ]
+    },
+    "Delphi Doctor Claims": {
+      "disease": "flu",
+      "signal": "Delphi Doctor Claims",
+      "source": "Delphi Doctor Claims",
+      "unit": "% of outpatient doctor visits",
+      "asOf": "",
+      "states": []
+    },
+    "Kinsa": {
+      "disease": "flu",
+      "signal": "Kinsa",
+      "source": "Kinsa",
+      "unit": "illness signal (unitless index)",
+      "asOf": "",
+      "states": []
+    },
+    "Google Health Trends": {
+      "disease": "flu",
+      "signal": "Google Health Trends",
+      "source": "Google Health Trends",
+      "unit": "scaled search index",
+      "asOf": "",
+      "states": []
     }
   },
   "covid": {
@@ -1867,6 +2905,1038 @@
           "asOf": "2026-07-25"
         }
       ]
+    },
+    "CDC RespNET": {
+      "disease": "covid",
+      "signal": "CDC RespNET",
+      "source": "CDC RespNET",
+      "unit": "lab-confirmed hospitalizations per 100,000",
+      "asOf": "2026-07-25",
+      "states": [
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0.4,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.4,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0.2,
+          "asOf": "2026-07-25"
+        }
+      ]
+    },
+    "CDC ILINet": {
+      "disease": "covid",
+      "signal": "CDC ILINet",
+      "source": "CDC ILINet",
+      "unit": "% of outpatient visits (ILI)",
+      "asOf": "",
+      "states": []
+    },
+    "Epic Cosmos, ED": {
+      "disease": "covid",
+      "signal": "Epic Cosmos, ED",
+      "source": "Epic Cosmos, ED",
+      "unit": "% of ED visits (Epic Cosmos)",
+      "asOf": "2026-07-18",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 15.151515151515152,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 27.77777777777778,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 2.717391304347826,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 6.410256410256411,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 8.928571428571429,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 23.80952380952381,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "11",
+          "stateName": "District of Columbia",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 1.8726591760299625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 4.545454545454546,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 11.363636363636363,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 29.41176470588235,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 5.555555555555555,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 13.157894736842104,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 14.285714285714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 17.857142857142858,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 19.23076923076923,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 14.285714285714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 15.625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 5.813953488372093,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 5.4945054945054945,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 10.416666666666666,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 27.77777777777778,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 41.666666666666664,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 41.666666666666664,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 8.620689655172415,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 31.25,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 2.6595744680851063,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 4,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 3.1055900621118013,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 13.88888888888889,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 16.666666666666668,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 3.5714285714285716,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 7.042253521126761,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 2.6041666666666665,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 5,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 38.46153846153846,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 4.3478260869565215,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 15.625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 100,
+          "asOf": "2026-07-18"
+        }
+      ]
+    },
+    "Delphi Hospital Claims": {
+      "disease": "covid",
+      "signal": "Delphi Hospital Claims",
+      "source": "Delphi Hospital Claims",
+      "unit": "% of new hospital admissions",
+      "asOf": "2026-05-30",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 0.085561,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 0.157319,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 0.085718,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0.082604,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.082097,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 0.079886,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 0.172488,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 0.146197,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.06453,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 0.104171,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 0.265187,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 0.076786,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 0.128585,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 0.097663,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 0.089706,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 0.090323,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 0.365488,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 0.303479,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0.23757,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 0.08822,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0.091162,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0.089243,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 0.087484,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 0.268273,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 0.380243,
+          "asOf": "2026-05-02"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 0.303999,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 0.676799,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 0.271705,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 0.107669,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0.451476,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0.12642,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0.111205,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 0.437625,
+          "asOf": "2026-02-14"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 0.066298,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 0.079742,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0.121103,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 0.084741,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 0.276897,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 0.074369,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 0.353445,
+          "asOf": "2026-05-02"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.085063,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 0.07963,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0.219386,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 0.47059,
+          "asOf": "2026-05-02"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 0.068232,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 0.087075,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 0.227407,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 0.087627,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 0.487207,
+          "asOf": "2026-05-09"
+        }
+      ]
+    },
+    "Delphi Doctor Claims": {
+      "disease": "covid",
+      "signal": "Delphi Doctor Claims",
+      "source": "Delphi Doctor Claims",
+      "unit": "% of outpatient doctor visits",
+      "asOf": "2026-05-30",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 0.493392,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "02",
+          "stateName": "Alaska",
+          "value": 0,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 0.032392,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 0.091587,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0.086646,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.058347,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 0.092144,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 0.17192,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 0.23174,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.227693,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 0,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 0.074494,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 0.02859,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 0.098751,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 0.078124,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 0.25035,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 0.138844,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 0.070358,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 0.055541,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0.213623,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 0.063546,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0.036321,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0.042664,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 0.200128,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 0.427096,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 0,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 0.291586,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 0.159433,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 0.161533,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 0.244674,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0.161166,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0.134345,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0.59351,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 0.272574,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 0.222068,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 0.088739,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0.013066,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 0.101038,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 0.471988,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 0.100153,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 0.220597,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.095795,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 0.119282,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0.097374,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 0.124655,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 0.045334,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 0.01184,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 0.171923,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 0.106821,
+          "asOf": "2026-05-30"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 0.321456,
+          "asOf": "2026-05-30"
+        }
+      ]
+    },
+    "Kinsa": {
+      "disease": "covid",
+      "signal": "Kinsa",
+      "source": "Kinsa",
+      "unit": "illness signal (unitless index)",
+      "asOf": "",
+      "states": []
+    },
+    "Google Health Trends": {
+      "disease": "covid",
+      "signal": "Google Health Trends",
+      "source": "Google Health Trends",
+      "unit": "scaled search index",
+      "asOf": "",
+      "states": []
     }
   },
   "rsv": {
@@ -2799,6 +4869,749 @@
           "stateFips": "56",
           "stateName": "Wyoming",
           "value": 1,
+          "asOf": "2026-07-25"
+        }
+      ]
+    },
+    "CDC RespNET": {
+      "disease": "rsv",
+      "signal": "CDC RespNET",
+      "source": "CDC RespNET",
+      "unit": "lab-confirmed hospitalizations per 100,000",
+      "asOf": "2026-07-25",
+      "states": [
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0.1,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0,
+          "asOf": "2026-07-25"
+        }
+      ]
+    },
+    "CDC ILINet": {
+      "disease": "rsv",
+      "signal": "CDC ILINet",
+      "source": "CDC ILINet",
+      "unit": "% of outpatient visits (ILI)",
+      "asOf": "",
+      "states": []
+    },
+    "Epic Cosmos, ED": {
+      "disease": "rsv",
+      "signal": "Epic Cosmos, ED",
+      "source": "Epic Cosmos, ED",
+      "unit": "% of ED visits (Epic Cosmos)",
+      "asOf": "2026-07-18",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 15.151515151515152,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 27.77777777777778,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 2.717391304347826,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 6.410256410256411,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 8.928571428571429,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 23.80952380952381,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "11",
+          "stateName": "District of Columbia",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 1.8726591760299625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 4.545454545454546,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 11.363636363636363,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 29.41176470588235,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 5.555555555555555,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 13.157894736842104,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 14.285714285714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 17.857142857142858,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 19.23076923076923,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 14.285714285714286,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 15.625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 5.813953488372093,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 5.4945054945054945,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 10.416666666666666,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 27.77777777777778,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 41.666666666666664,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 41.666666666666664,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 8.620689655172415,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 31.25,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 2.6595744680851063,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 4,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 3.1055900621118013,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 13.88888888888889,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 16.666666666666668,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 3.5714285714285716,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 7.042253521126761,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 2.6041666666666665,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 5,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 38.46153846153846,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 4.3478260869565215,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 15.625,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 100,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 17.24137931034483,
+          "asOf": "2026-07-18"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 100,
+          "asOf": "2026-07-18"
+        }
+      ]
+    },
+    "Delphi Hospital Claims": {
+      "disease": "rsv",
+      "signal": "Delphi Hospital Claims",
+      "source": "Delphi Hospital Claims",
+      "unit": "% of new hospital admissions",
+      "asOf": "",
+      "states": []
+    },
+    "Delphi Doctor Claims": {
+      "disease": "rsv",
+      "signal": "Delphi Doctor Claims",
+      "source": "Delphi Doctor Claims",
+      "unit": "% of outpatient doctor visits",
+      "asOf": "",
+      "states": []
+    },
+    "Kinsa": {
+      "disease": "rsv",
+      "signal": "Kinsa",
+      "source": "Kinsa",
+      "unit": "illness signal (unitless index)",
+      "asOf": "",
+      "states": []
+    },
+    "Google Health Trends": {
+      "disease": "rsv",
+      "signal": "Google Health Trends",
+      "source": "Google Health Trends",
+      "unit": "scaled search index",
+      "asOf": "2026-07-25",
+      "states": [
+        {
+          "stateFips": "01",
+          "stateName": "Alabama",
+          "value": 0.01176610315899884,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "02",
+          "stateName": "Alaska",
+          "value": 0.0008866954968602729,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "04",
+          "stateName": "Arizona",
+          "value": 0.00354645991297894,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "05",
+          "stateName": "Arkansas",
+          "value": 0.01185472024945549,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "06",
+          "stateName": "California",
+          "value": 0.00469044670285945,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "08",
+          "stateName": "Colorado",
+          "value": 0.00565085659832807,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "09",
+          "stateName": "Connecticut",
+          "value": 0.00583130576322953,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "10",
+          "stateName": "Delaware",
+          "value": 0.0044285662393695,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "11",
+          "stateName": "District of Columbia",
+          "value": 0.00781777512741453,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "12",
+          "stateName": "Florida",
+          "value": 0.00593455230150826,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "13",
+          "stateName": "Georgia",
+          "value": 0.00827126952299593,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "15",
+          "stateName": "Hawaii",
+          "value": 0.00947336063488688,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "16",
+          "stateName": "Idaho",
+          "value": 0.00578244930511055,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "17",
+          "stateName": "Illinois",
+          "value": 0.00240944288464752,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "18",
+          "stateName": "Indiana",
+          "value": 0.004271775023217,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "19",
+          "stateName": "Iowa",
+          "value": 0.00367057286962181,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "20",
+          "stateName": "Kansas",
+          "value": 0.00525163556807958,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "21",
+          "stateName": "Kentucky",
+          "value": 0.00908096534780087,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "22",
+          "stateName": "Louisiana",
+          "value": 0.00733664032945123,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "23",
+          "stateName": "Maine",
+          "value": 0.00162918804472635,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "24",
+          "stateName": "Maryland",
+          "value": 0.00716718814376731,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "25",
+          "stateName": "Massachusetts",
+          "value": 0.00323218273746079,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "26",
+          "stateName": "Michigan",
+          "value": 0.00552529566587513,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "27",
+          "stateName": "Minnesota",
+          "value": 0.00161762909029658,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "28",
+          "stateName": "Mississippi",
+          "value": 0.01635702760413379,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "29",
+          "stateName": "Missouri",
+          "value": 0.00500511431810701,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "30",
+          "stateName": "Montana",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "31",
+          "stateName": "Nebraska",
+          "value": 0.00361709699714248,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "32",
+          "stateName": "Nevada",
+          "value": 0.00861610140612983,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "33",
+          "stateName": "New Hampshire",
+          "value": 0.00601766408423217,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "34",
+          "stateName": "New Jersey",
+          "value": 0.00603159334317264,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "35",
+          "stateName": "New Mexico",
+          "value": 0.00785301474278231,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "36",
+          "stateName": "New York",
+          "value": 0.005670213234149,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "37",
+          "stateName": "North Carolina",
+          "value": 0.0052403528244777,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "38",
+          "stateName": "North Dakota",
+          "value": 0.01612535459316541,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "39",
+          "stateName": "Ohio",
+          "value": 0.00239052379642667,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "40",
+          "stateName": "Oklahoma",
+          "value": 0.00820615958462332,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "41",
+          "stateName": "Oregon",
+          "value": 0.00280756551416908,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "42",
+          "stateName": "Pennsylvania",
+          "value": 0.00345159341083552,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "44",
+          "stateName": "Rhode Island",
+          "value": 0,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "45",
+          "stateName": "South Carolina",
+          "value": 0.003617002646111,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "46",
+          "stateName": "South Dakota",
+          "value": 0.00314167737801775,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "47",
+          "stateName": "Tennessee",
+          "value": 0.01033834294400612,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "48",
+          "stateName": "Texas",
+          "value": 0.00614900276764073,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "49",
+          "stateName": "Utah",
+          "value": 0.00560819473418916,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "50",
+          "stateName": "Vermont",
+          "value": 0.00315920339555604,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "51",
+          "stateName": "Virginia",
+          "value": 0.00577411380840403,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "53",
+          "stateName": "Washington",
+          "value": 0.00405398472268195,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "54",
+          "stateName": "West Virginia",
+          "value": 0.01139268964678361,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "55",
+          "stateName": "Wisconsin",
+          "value": 0.00217798080297765,
+          "asOf": "2026-07-25"
+        },
+        {
+          "stateFips": "56",
+          "stateName": "Wyoming",
+          "value": 0.01848199321785501,
           "asOf": "2026-07-25"
         }
       ]

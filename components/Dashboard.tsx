@@ -10,6 +10,7 @@ import type {
   SignalSeries,
   CountySeries,
 } from "@/lib/pophive/types";
+import { AVAILABLE_SIGNALS, SIGNAL_GROUPS, UNIT_BY_SOURCE, type Signal } from "@/lib/pophive/signals";
 import { NYC_BOROUGH_FIPS } from "@/lib/nycDohmh";
 
 type RespiratoryDisease = "flu" | "covid" | "rsv";
@@ -19,7 +20,6 @@ type Disease = RespiratoryDisease | "measles";
 const TRI_STATE_FIPS = ["36", "34", "09"];
 const NYC_BOROUGH_FIPS_LIST = Object.values(NYC_BOROUGH_FIPS);
 
-const RESPIRATORY_SIGNALS = ["CDC NSSP", "CDC NWSS", "CDC NHSN"] as const;
 const MEASLES_SIGNALS = ["weekly", "cumulative"] as const;
 
 const DISEASE_LABEL: Record<Disease, string> = {
@@ -32,7 +32,14 @@ const DISEASE_LABEL: Record<Disease, string> = {
 const SIGNAL_LABEL: Record<string, string> = {
   "CDC NSSP": "ED visits %",
   "CDC NWSS": "Wastewater",
-  "CDC NHSN": "Hospitalizations",
+  "CDC NHSN": "Hospital admissions",
+  "CDC RespNET": "Lab-confirmed hosp.",
+  "CDC ILINet": "ILI visits %",
+  "Epic Cosmos, ED": "Epic ED visits %",
+  "Delphi Hospital Claims": "Hosp. claims %",
+  "Delphi Doctor Claims": "Doctor claims %",
+  Kinsa: "Kinsa illness signal",
+  "Google Health Trends": "Google searches",
   weekly: "Weekly cases",
   cumulative: "Cumulative (season)",
 };
@@ -102,8 +109,7 @@ export function Dashboard({
 }: DashboardProps) {
   const [mainTab, setMainTab] = useState<"outbreak" | "chronic">("outbreak");
   const [disease, setDisease] = useState<Disease>("flu");
-  const [respiratorySignal, setRespiratorySignal] =
-    useState<(typeof RESPIRATORY_SIGNALS)[number]>("CDC NSSP");
+  const [respiratorySignal, setRespiratorySignal] = useState<Signal>("CDC NSSP");
   const [measlesSignal, setMeaslesSignal] =
     useState<(typeof MEASLES_SIGNALS)[number]>("weekly");
   const [drilldown, setDrilldown] = useState<{ fips: string; name: string } | null>(
@@ -213,27 +219,42 @@ export function Dashboard({
           ))}
         </div>
 
-        <div className="flex gap-1 rounded-lg border p-1" style={{ borderColor: "var(--color-border-default)" }}>
-          {!isMeasles &&
-            RESPIRATORY_SIGNALS.map((s) => (
-              <button
-                key={s}
-                onClick={() => setRespiratorySignal(s)}
-                className="rounded-md px-3 py-1.5 text-sm font-medium"
-                style={{
-                  background: respiratorySignal === s ? "var(--color-bg-page)" : "transparent",
-                  color: "var(--color-text-secondary)",
-                  border:
-                    respiratorySignal === s
-                      ? "1px solid var(--color-border-default)"
-                      : "1px solid transparent",
-                }}
-              >
-                {SIGNAL_LABEL[s]}
-              </button>
-            ))}
-          {isMeasles &&
-            MEASLES_SIGNALS.map((s) => (
+        {!isMeasles ? (
+          <select
+            value={respiratorySignal}
+            onChange={(e) => setRespiratorySignal(e.target.value as Signal)}
+            className="rounded-lg border px-3 py-1.5 text-sm font-medium"
+            style={{
+              borderColor: "var(--color-border-default)",
+              background: "var(--color-bg-surface)",
+              color: "var(--color-text-primary)",
+            }}
+          >
+            <optgroup label="Syndromic surveillance">
+              {SIGNAL_GROUPS.syndromic.map((s) => (
+                <option key={s} value={s}>
+                  {SIGNAL_LABEL[s]}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="Medical claims">
+              {SIGNAL_GROUPS.medical.map((s) => (
+                <option key={s} value={s}>
+                  {SIGNAL_LABEL[s]}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="Behavioral signals">
+              {SIGNAL_GROUPS.behavioral.map((s) => (
+                <option key={s} value={s}>
+                  {SIGNAL_LABEL[s]}
+                </option>
+              ))}
+            </optgroup>
+          </select>
+        ) : (
+          <div className="flex gap-1 rounded-lg border p-1" style={{ borderColor: "var(--color-border-default)" }}>
+            {MEASLES_SIGNALS.map((s) => (
               <button
                 key={s}
                 onClick={() => setMeaslesSignal(s)}
@@ -250,7 +271,8 @@ export function Dashboard({
                 {SIGNAL_LABEL[s]}
               </button>
             ))}
-        </div>
+          </div>
+        )}
 
         <button
           onClick={handleToggleTriState}

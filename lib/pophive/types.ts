@@ -17,6 +17,8 @@ export interface OverviewCard {
   /** True when the level banding is our own approximation (see docs), not an
    * official PopHIVE-published category. */
   levelIsApproximate: boolean;
+  /** Historical data points for the 2-year window (for trend charts). */
+  historicalPoints: { date: string; value: number }[];
 }
 
 export interface StateDatum {

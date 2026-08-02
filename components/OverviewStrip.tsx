@@ -1,4 +1,7 @@
+"use client";
+
 import type { OverviewCard, MeaslesOverviewCard, Level, Trend } from "@/lib/pophive/types";
+import { TrendChart } from "./TrendChart";
 
 const LEVEL_COLOR: Record<Level, string> = {
   minimal: "var(--color-state-minimal)",
@@ -38,10 +41,10 @@ function Trend({ trend }: { trend: Trend }) {
   );
 }
 
-function Card({ children }: { children: React.ReactNode }) {
+function Card({ children, compact = false }: { children: React.ReactNode; compact?: boolean }) {
   return (
     <div
-      className="flex-1 min-w-[160px] rounded-lg border p-4"
+      className={compact ? "flex-1 min-w-[160px] rounded-lg border p-4" : "flex-1 min-w-[200px] rounded-lg border p-4"}
       style={{
         background: "var(--color-bg-surface)",
         borderColor: "var(--color-border-default)",
@@ -75,6 +78,16 @@ function RespiratoryCard({ card }: { card: OverviewCard }) {
         {card.pctOfPeak}% of 2-year peak &middot; {card.value}
         {card.unit}
       </p>
+      {card.historicalPoints && card.historicalPoints.length > 0 && (
+        <div className="mt-3">
+          <TrendChart
+            data={card.historicalPoints}
+            peakValue={card.peakValue}
+            currentValue={card.value}
+            unit={card.unit}
+          />
+        </div>
+      )}
       <p className="mt-2 text-xs" style={{ color: "var(--color-text-muted)" }}>
         {card.source} &middot; as of {card.asOf}
         {card.levelIsApproximate && " · level is our own estimate, not PopHIVE's"}

@@ -1,6 +1,7 @@
 import { queryParquet } from "./duckdb";
 import { STATE_FIPS_BY_NAME, STATE_NAME_BY_FIPS } from "./states";
 import { levelFromPctOfPeak, trendFromRelativeChange } from "./bands";
+import { AVAILABLE_SIGNALS, UNIT_BY_SOURCE, type Signal } from "./signals";
 import type { OverviewCard, SignalSeries, StateDatum } from "./types";
 
 type RespiratoryDisease = "flu" | "covid" | "rsv";
@@ -24,26 +25,7 @@ const DISEASE_LABEL: Record<RespiratoryDisease, string> = {
   rsv: "RSV",
 };
 
-// The default/primary source per D-003 (ED visits %, CDC NSSP), plus the
-// additional signals exposed as a toggle in the map (M2 scope: these three;
-// CDC RespNET, CDC ILINet, Kinsa, Epic Cosmos, Delphi, and Google Health
-// Trends are available in the same files but not yet wired into the UI —
-// tracked as a future enhancement).
-export const AVAILABLE_SIGNALS = ["CDC NSSP", "CDC NWSS", "CDC NHSN"] as const;
-export type Signal = (typeof AVAILABLE_SIGNALS)[number];
-
-export const UNIT_BY_SOURCE: Record<string, string> = {
-  "CDC NSSP": "% of ED visits",
-  "CDC NWSS": "wastewater viral activity level",
-  "CDC NHSN": "hospital admissions",
-  "CDC RespNET": "lab-confirmed hospitalizations per 100,000",
-  "CDC ILINet": "% of outpatient visits (ILI)",
-  "Epic Cosmos, ED": "% of ED visits (Epic Cosmos)",
-  Kinsa: "illness signal (unitless index)",
-  "Google Health Trends": "scaled search index",
-  "Delphi Hospital Claims": "% of new hospital admissions",
-  "Delphi Doctor Claims": "% of outpatient doctor visits",
-};
+// Signals are now defined in signals.ts for client-safe importing without DuckDB.
 
 const rowCache = new Map<string, Promise<TrendRow[]>>();
 
@@ -119,6 +101,10 @@ export async function buildOverviewCard(
     source,
     asOf: latest.date,
     levelIsApproximate: approximate,
+    historicalPoints: windowRows.map((r) => ({
+      date: r.date,
+      value: r.value as number,
+    })),
   };
 }
 

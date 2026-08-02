@@ -7,11 +7,8 @@ import path from "node:path";
 
 // Load environment variables from .env.local
 dotenv.config({ path: ".env.local" });
-import {
-  buildOverviewCard,
-  buildStateSignalSeries,
-  AVAILABLE_SIGNALS,
-} from "../lib/pophive/overallTrends";
+import { buildOverviewCard, buildStateSignalSeries } from "../lib/pophive/overallTrends";
+import { AVAILABLE_SIGNALS } from "../lib/pophive/signals";
 import {
   buildMeaslesOverviewCard,
   buildMeaslesWeeklySeries,
