@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 
 interface HealthDataItem {
   date?: string;
-  state?: string;
+  state?: string | null;
+  disease?: string | null;
   value?: number;
-  category?: string;
+  category?: string | null;
   [key: string]: unknown;
 }
 
@@ -95,7 +96,7 @@ export default function HealthDataCard({
           {data.slice(0, 3).map((item, idx) => (
             <div key={idx} className="text-sm flex justify-between items-center">
               <span className="text-gray-700 dark:text-gray-300">
-                {(item.state || item.disease || item.category || "Data")}
+                {String(item.state || item.disease || item.category || "Data")}
               </span>
               {item.value && (
                 <span className="font-mono font-semibold">
