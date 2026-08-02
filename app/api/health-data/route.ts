@@ -1,5 +1,5 @@
 // Health Data Query API
-// Query CDC datasets by category, date range, geography, and more
+// Query processed CDC/health datasets by category, geography, and more
 
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -24,6 +24,15 @@ interface DataResponse {
   error?: string;
 }
 
+interface StateData {
+  stateFips?: string;
+  stateName?: string;
+  state?: string;
+  disease?: string;
+  value?: number;
+  [key: string]: unknown;
+}
+
 // Parse query parameters from URL
 function parseParams(searchParams: URLSearchParams): QueryParams {
   return {
@@ -36,8 +45,8 @@ function parseParams(searchParams: URLSearchParams): QueryParams {
   };
 }
 
-// Load dataset file
-async function loadDataset(filename: string): Promise<unknown[] | null> {
+// Load processed dataset file
+async function loadDataset(filename: string): Promise<Record<string, unknown> | null> {
   try {
     const filepath = path.join(process.cwd(), "data", "generated", filename);
     const data = await readFile(filepath, "utf-8");
@@ -47,54 +56,54 @@ async function loadDataset(filename: string): Promise<unknown[] | null> {
   }
 }
 
+// Extract state data from processed JSON structure and flatten into array
+function extractStatesFromProcessedData(data: Record<string, unknown>, disease?: string): StateData[] {
+  const result: StateData[] = [];
+
+  if (disease && disease in data) {
+    const diseaseData = data[disease] as Record<string, unknown>;
+    if (diseaseData && "states" in diseaseData) {
+      const states = diseaseData.states as Array<Record<string, unknown>>;
+      states.forEach((state) => {
+        result.push({
+          disease,
+          state: (state.stateName as string) || "",
+          value: state.value as number,
+          ...state,
+        });
+      });
+    }
+  } else {
+    // No specific disease, extract all diseases
+    Object.entries(data).forEach(([key, value]) => {
+      if (typeof value === "object" && value !== null && "states" in value) {
+        const diseaseData = value as Record<string, unknown>;
+        const states = diseaseData.states as Array<Record<string, unknown>>;
+        states.forEach((state) => {
+          result.push({
+            disease: key,
+            state: (state.stateName as string) || "",
+            value: state.value as number,
+            ...state,
+          });
+        });
+      }
+    });
+  }
+
+  return result;
+}
+
 // Filter data by state
-function filterByState(data: unknown[], state: string): unknown[] {
+function filterByState(data: StateData[], state: string): StateData[] {
   if (!state) return data;
 
   const stateLower = state.toLowerCase();
   return data.filter((row) => {
-    if (typeof row !== "object" || !row) return false;
-    const obj = row as Record<string, unknown>;
-
-    // Check common state field names
-    const stateFields = ["state", "location_name", "geography", "state_or_territory", "reporting_state"];
-    for (const field of stateFields) {
-      if (field in obj && typeof obj[field] === "string") {
-        if (obj[field]!.toLowerCase().includes(stateLower)) {
-          return true;
-        }
-      }
-    }
-
-    return false;
-  });
-}
-
-// Filter by date range
-function filterByDateRange(data: unknown[], daysBack: number): unknown[] {
-  if (!daysBack || daysBack > 365) return data; // Reasonable limit
-
-  const cutoffDate = new Date();
-  cutoffDate.setDate(cutoffDate.getDate() - daysBack);
-  const isoDate = cutoffDate.toISOString().split("T")[0];
-
-  const dateFields = ["date", "time_period_start_date", "year_start", "week_ending_date", "week_end"];
-
-  return data.filter((row) => {
-    if (typeof row !== "object" || !row) return false;
-    const obj = row as Record<string, unknown>;
-
-    for (const field of dateFields) {
-      if (field in obj && typeof obj[field] === "string") {
-        const val = obj[field]!;
-        // Simple ISO date comparison
-        if (typeof val === "string" && val >= isoDate) {
-          return true;
-        }
-      }
-    }
-
-    return true; // Include if no date field found
+    return (
+      (row.state && row.state.toLowerCase().includes(stateLower)) ||
+      (row.stateName && row.stateName.toLowerCase().includes(stateLower))
+    );
   });
 }
 
@@ -103,35 +112,36 @@ export async function GET(request: Request): Promise<Response> {
     const { searchParams } = new URL(request.url);
     const params = parseParams(searchParams);
 
-    // Dataset mapping
-    const datasets: Record<string, string> = {
-      "epidemic-trends": "cdc-epidemic-trends.json",
-      "nssp-ed-respiratory": "cdc-nssp-ed-respiratory.json",
-      "ari-activity-level": "cdc-ari-activity-level.json",
-      "chronic-disease-indicators": "cdc-chronic-disease-indicators.json",
-      "brfss-historical": "cdc-brfss-historical.json",
-      "drug-poisoning-mortality": "cdc-drug-poisoning-mortality.json",
-      "tbi-ed-visits": "cdc-tbi-ed-visits.json",
-      "influenza-pneumonia-deaths": "cdc-influenza-pneumonia-deaths.json",
-      "anxiety-depression": "cdc-anxiety-depression.json",
-      "mental-health-care": "cdc-mental-health-care.json",
-      "covid-test-positivity": "cdc-backlog-seuz-s2cv.json",
-      "healthcare-surveillance": "cdc-backlog-v58w-vynu.json",
+    // Dataset mapping to processed data files
+    const datasets: Record<string, { file: string; disease?: string }> = {
+      "epidemic-trends": { file: "states.json", disease: "flu" },
+      "nssp-ed-respiratory": { file: "states.json", disease: "nssp_ed_respiratory_visits" },
+      "ari-activity-level": { file: "states.json", disease: "ari_activity_level" },
+      "chronic-disease-indicators": { file: "chronic.json", disease: "diabetes" },
+      "brfss-historical": { file: "chronic.json" },
+      "drug-poisoning-mortality": { file: "states.json", disease: "drug_poisoning_mortality" },
+      "tbi-ed-visits": { file: "states.json", disease: "tbi_ed_visits" },
+      "influenza-pneumonia-deaths": { file: "states.json", disease: "flu" },
+      "anxiety-depression": { file: "chronic.json" },
+      "mental-health-care": { file: "chronic.json" },
+      "covid-test-positivity": { file: "states.json", disease: "covid" },
+      "healthcare-surveillance": { file: "states.json" },
     };
 
     // If no dataset specified, list available datasets
     if (!params.dataset) {
       return Response.json({
         success: true,
-        message: "Available datasets",
+        message: "Available datasets (using processed summary data)",
         datasets: Object.keys(datasets),
         usage: "?dataset=epidemic-trends&state=california&limit=100",
+        note: "CDC data is available by state. Processed from CDC NSSP, PopHIVE, and CDC summary datasets.",
       });
     }
 
     // Validate dataset
-    const filename = datasets[params.dataset];
-    if (!filename) {
+    const datasetConfig = datasets[params.dataset];
+    if (!datasetConfig) {
       return Response.json(
         {
           success: false,
@@ -142,8 +152,8 @@ export async function GET(request: Request): Promise<Response> {
       );
     }
 
-    // Load dataset
-    const rawData = await loadDataset(filename);
+    // Load processed dataset
+    const rawData = await loadDataset(datasetConfig.file);
     if (!rawData) {
       return Response.json(
         { success: false, error: `Could not load dataset: ${params.dataset}` },
@@ -151,15 +161,12 @@ export async function GET(request: Request): Promise<Response> {
       );
     }
 
-    // Apply filters
-    let filteredData = rawData;
+    // Extract state data and flatten structure
+    let filteredData = extractStatesFromProcessedData(rawData, datasetConfig.disease);
 
+    // Apply filters
     if (params.state) {
       filteredData = filterByState(filteredData, params.state);
-    }
-
-    if (params.daysBack) {
-      filteredData = filterByDateRange(filteredData, params.daysBack);
     }
 
     // Apply limit
@@ -174,12 +181,11 @@ export async function GET(request: Request): Promise<Response> {
       rows: filteredData.length,
       data: filteredData,
       metadata: {
-        originalRows: rawData.length,
         filters: {
           state: params.state || null,
-          daysBack: params.daysBack || null,
           limit: params.limit,
         },
+        source: "Processed CDC data (NSSP, PopHIVE, CDC summaries)",
       },
     };
 
