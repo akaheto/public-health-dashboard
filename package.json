@@ -1,0 +1,41 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build:data": "tsx scripts/build-data.ts",
+    "prebuild": "npm run build:data",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-geo": "^3.1.1",
+    "d3-scale": "^4.0.2",
+    "dotenv": "^17.4.2",
+    "duckdb": "^1.4.4",
+    "next": "16.2.12",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "recharts": "^3.10.1",
+    "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/d3-array": "^3.2.2",
+    "@types/d3-geo": "^3.1.0",
+    "@types/d3-scale": "^4.0.9",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/topojson-client": "^3.1.5",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.1",
+    "typescript": "^5"
+  }
+}

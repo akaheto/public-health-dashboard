@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens per Project Documents/surveillance-dashboard/12-visual-style-guide.md.
+ * Palette source: the dataviz skill's validated reference palette
+ * (sequential blue ramp + fixed status palette), applied here as the
+ * project's semantic tokens rather than swapped for a separate brand.
+ */
+:root {
+  --color-bg-page: #f9f9f7;
+  --color-bg-surface: #fcfcfb;
+  --color-text-primary: #0b0b0b;
+  --color-text-secondary: #52514e;
+  --color-text-muted: #898781;
+  --color-border-default: #e1e0d9;
+  --color-focus: #2a78d6;
+
+  /* Status palette — fixed, never themed. Maps 1:1 to minimal/low/moderate/high. */
+  --color-state-minimal: #0ca30c;
+  --color-state-low: #fab219;
+  --color-state-moderate: #ec835a;
+  --color-state-high: #d03b3b;
+
+  /* Sequential blue ramp (100 lightest -> 700 darkest) for choropleth magnitude. */
+  --seq-100: #cde2fb;
+  --seq-150: #b7d3f6;
+  --seq-200: #9ec5f4;
+  --seq-250: #86b6ef;
+  --seq-300: #6da7ec;
+  --seq-350: #5598e7;
+  --seq-400: #3987e5;
+  --seq-450: #2a78d6;
+  --seq-500: #256abf;
+  --seq-550: #1c5cab;
+  --seq-600: #184f95;
+  --seq-650: #104281;
+  --seq-700: #0d366b;
+
+  --color-no-data: #e1e0d9;
+}
+
+@theme inline {
+  --color-background: var(--color-bg-page);
+  --color-foreground: var(--color-text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-page: #0d0d0d;
+    --color-bg-surface: #1a1a19;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #c3c2b7;
+    --color-text-muted: #898781;
+    --color-border-default: #2c2c2a;
+    --color-focus: #3987e5;
+
+    --color-no-data: #2c2c2a;
+  }
+}
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}

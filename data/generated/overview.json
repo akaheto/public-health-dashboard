@@ -1,0 +1,53 @@
+{
+  "flu": {
+    "disease": "flu",
+    "label": "Influenza",
+    "value": 0.07,
+    "unit": "% of ED visits",
+    "level": "minimal",
+    "trend": "declining",
+    "pctOfPeak": 0.8,
+    "peakValue": 8.59,
+    "source": "CDC NSSP",
+    "asOf": "2026-07-25",
+    "levelIsApproximate": true
+  },
+  "covid": {
+    "disease": "covid",
+    "label": "COVID-19",
+    "value": 0.21,
+    "unit": "% of ED visits",
+    "level": "low",
+    "trend": "rising",
+    "pctOfPeak": 8,
+    "peakValue": 2.61,
+    "source": "CDC NSSP",
+    "asOf": "2026-07-25",
+    "levelIsApproximate": true
+  },
+  "rsv": {
+    "disease": "rsv",
+    "label": "RSV",
+    "value": 0.02,
+    "unit": "% of ED visits",
+    "level": "minimal",
+    "trend": "declining",
+    "pctOfPeak": 1.9,
+    "peakValue": 1.08,
+    "source": "CDC NSSP",
+    "asOf": "2026-07-25",
+    "levelIsApproximate": true
+  },
+  "measles": {
+    "disease": "measles",
+    "label": "Measles",
+    "weeklyCasesUS": 42,
+    "weeklyCasesUSPrior4w": 21,
+    "trend": "rising",
+    "activeStateCount": 7,
+    "asOf": "2026-07-25",
+    "source": "jhu_measles_cases",
+    "levelNotClassified": true
+  },
+  "generatedAt": "2026-08-02T19:31:30.264Z"
+}

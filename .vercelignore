@@ -1,0 +1,4 @@
+# Vercel deployment ignore
+# Data files are regenerated during build, exclude to stay under file limits
+data/generated/
+data/archive/
