@@ -6,6 +6,7 @@ interface CountiesPayload {
   flu: CountySeries;
   covid: CountySeries;
   rsv: CountySeries;
+  measles: CountySeries;
 }
 
 export async function GET(request: NextRequest) {
@@ -33,6 +34,10 @@ export async function GET(request: NextRequest) {
     rsv: {
       ...data.rsv,
       counties: data.rsv.counties.filter((c) => c.countyFips.startsWith(stateFips)),
+    },
+    measles: {
+      ...data.measles,
+      counties: data.measles.counties.filter((c) => c.countyFips.startsWith(stateFips)),
     },
   };
 

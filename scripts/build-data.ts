@@ -13,6 +13,7 @@ import {
   buildMeaslesOverviewCard,
   buildMeaslesWeeklySeries,
   buildMeaslesCumulativeSeries,
+  buildMeaslesCountySeries,
 } from "../lib/pophive/measles";
 import { buildCountySeries } from "../lib/pophive/countyEdVisits";
 import {
@@ -133,6 +134,14 @@ async function main() {
       `  ${disease}: ${series.counties.length} counties (${estimated} state-estimate fallback, ${dohmhCount} NYC DOHMH), as of ${series.asOf}`
     );
   }
+
+  // E-009: County-level measles data
+  const measlesCounty = await buildMeaslesCountySeries();
+  counties.measles = measlesCounty;
+  console.log(
+    `  measles: ${measlesCounty.counties.length} counties, as of ${measlesCounty.asOf}`
+  );
+
   await writeFile(path.join(OUT_DIR, "counties.json"), JSON.stringify(counties, null, 2));
 
   console.log("\nBuilding vaccination-coverage series...");

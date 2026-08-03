@@ -65,6 +65,7 @@ export interface DashboardProps {
     flu: CountySeries;
     covid: CountySeries;
     rsv: CountySeries;
+    measles: CountySeries;
   };
   vaccination: {
     mmrHealthmap: SignalSeries;
@@ -151,7 +152,7 @@ export function Dashboard({
   const [loadingCounties, setLoadingCounties] = useState(false);
 
   const isMeasles = disease === "measles";
-  const canDrillDown = !isMeasles;
+  const canDrillDown = true; // E-009: measles now supports county-level drill-down
 
   const activeSeries: SignalSeries = isMeasles
     ? states.measles[measlesSignal]
@@ -160,8 +161,10 @@ export function Dashboard({
   const stateMapData = useMemo(() => seriesToMapData(activeSeries), [activeSeries]);
 
   const countyMapData = useMemo(() => {
-    if (isMeasles || (!drilldown && !triStateView) || !counties) return {};
-    return countySeriesToMapData(counties[disease as RespiratoryDisease]);
+    if ((!drilldown && !triStateView) || !counties) return {};
+    const countyData = isMeasles ? counties.measles : counties[disease as RespiratoryDisease];
+    if (!countyData) return {};
+    return countySeriesToMapData(countyData);
   }, [isMeasles, drilldown, triStateView, disease, counties]);
 
   const getVaccineSeries = () => {
@@ -204,7 +207,7 @@ export function Dashboard({
   function handleSelectDisease(next: Disease) {
     setDisease(next);
     setDrilldown(null);
-    if (next === "measles") setTriStateView(false);
+    // E-009: measles now supports drill-down like respiratory diseases
   }
 
   function handleToggleTriState() {
@@ -396,14 +399,12 @@ export function Dashboard({
 
         <button
           onClick={handleToggleTriState}
-          disabled={isMeasles}
-          className="rounded-lg border px-3 py-1.5 text-sm font-medium disabled:opacity-40"
+          className="rounded-lg border px-3 py-1.5 text-sm font-medium"
           style={{
             borderColor: "var(--color-border-default)",
             background: triStateView ? "var(--color-focus)" : "transparent",
             color: triStateView ? "white" : "var(--color-text-secondary)",
           }}
-          title={isMeasles ? "No county-level measles data yet" : undefined}
         >
           Tri-State + NYC
         </button>
@@ -417,7 +418,7 @@ export function Dashboard({
       {triStateView ? (
         <div>
           <h3 className="mb-2 text-sm font-medium" style={{ color: "var(--color-text-primary)" }}>
-            {`NY / NJ / CT counties · ${DISEASE_LABEL[disease]} ED visits % · NYC boroughs outlined`}
+            {`NY / NJ / CT counties · ${DISEASE_LABEL[disease]} ${isMeasles ? "weekly cases" : "ED visits %"} · NYC boroughs outlined`}
           </h3>
           <p className="mb-2 text-xs" style={{ color: "var(--color-text-secondary)" }}>
             NYC borough values come from NYC DOHMH&apos;s own open data (true
@@ -427,7 +428,7 @@ export function Dashboard({
           <Choropleth
             view="counties"
             data={countyMapData}
-            unit="%"
+            unit={isMeasles ? "cases" : "%"}
             stateFips={TRI_STATE_FIPS}
             highlightFips={NYC_BOROUGH_FIPS_LIST}
             onBack={() => setTriStateView(false)}
@@ -447,12 +448,14 @@ export function Dashboard({
       ) : (
         <div>
           <h3 className="mb-2 text-sm font-medium" style={{ color: "var(--color-text-primary)" }}>
-            {drilldown.name} counties &middot; {DISEASE_LABEL[disease]} ED visits %
+            {drilldown.name} counties &middot; {DISEASE_LABEL[disease]} {
+              isMeasles ? "weekly cases" : "ED visits %"
+            }
           </h3>
           <Choropleth
             view="counties"
             data={countyMapData}
-            unit="%"
+            unit={isMeasles ? "cases" : "%"}
             stateFips={drilldown.fips}
             onBack={() => setDrilldown(null)}
           />

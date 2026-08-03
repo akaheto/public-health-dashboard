@@ -56164,5 +56164,2254 @@
         "asOf": "2026-07-25"
       }
     ]
+  },
+  "measles": {
+    "disease": "measles",
+    "signal": "jhu_measles_cases",
+    "source": "jhu_measles_cases",
+    "unit": "reported cases (weekly)",
+    "asOf": "2026-07-25",
+    "counties": [
+      {
+        "countyFips": "00024",
+        "value": 3,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "00025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "00036",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "00045",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "01089",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "02020",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "02122",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04005",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04013",
+        "value": 4,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04015",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04017",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04019",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04021",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "04025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "05007",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "05045",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "05125",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06019",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06037",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06055",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06059",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06061",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06065",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06067",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06073",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06075",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06079",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06085",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06089",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06107",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "06113",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08001",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08005",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08007",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08014",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08031",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08041",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08065",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08069",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08077",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08083",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08101",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "08123",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "09003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "09170",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "10001",
+        "value": 4,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "11001",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12001",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12011",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12021",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12031",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12033",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12057",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12071",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12073",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12086",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12091",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12095",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12097",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12099",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12101",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12103",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12105",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "12109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "13029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "13051",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "13121",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "15003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16017",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16019",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16021",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16027",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16055",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16065",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "16081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "17031",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "17163",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "17199",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "18003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "18089",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "18133",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "19113",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "19153",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "19193",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "20069",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "20081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "20097",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "20145",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "20189",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "21067",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "21073",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "21111",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "21113",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "21219",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "21239",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "22071",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "23019",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "24027",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "24033",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "24510",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "25025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26005",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26055",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26065",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26099",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26103",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26115",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26117",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26121",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26125",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26133",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26139",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "26161",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "27037",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "27053",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "27109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "27163",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "29039",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "29095",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "29143",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "29213",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "30013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "30029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "30031",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "30041",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "30049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "30111",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "31109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "31141",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "31161",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "32003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "32031",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "34003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "34017",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "34029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "34031",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35005",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35009",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35015",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35023",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35043",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35045",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "35049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36061",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36069",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36071",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36079",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36087",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "36103",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37021",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37023",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37101",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37119",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37127",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37149",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37161",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "37179",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38017",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38035",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38067",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38073",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38097",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38099",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "38105",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39007",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39035",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39039",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39075",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39083",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39119",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "39123",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "40109",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "41005",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "41043",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "41051",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42011",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42017",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42029",
+        "value": 4,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42041",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42043",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42063",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42071",
+        "value": 11,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42075",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42087",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42091",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42097",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42101",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42109",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "42133",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "44007",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45021",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45045",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45077",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45081",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45083",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "45085",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46011",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46019",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46045",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46051",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46083",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46093",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "46103",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "47037",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "47141",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48003",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48017",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48019",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48027",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48033",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48039",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48043",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48065",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48079",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48085",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48111",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48113",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48115",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48121",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48133",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48135",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48141",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48143",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48147",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48157",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48163",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48165",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48169",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48189",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48197",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48201",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48203",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48209",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48219",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48229",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48259",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48277",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48279",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48303",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48305",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48309",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48317",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48329",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48339",
+        "value": 3,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48369",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48375",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48379",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48381",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48389",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48397",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48415",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48417",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48439",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48445",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48453",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48459",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48491",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "48501",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49005",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49007",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49011",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49035",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49037",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49041",
+        "value": 2,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49043",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49045",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49049",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49051",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49053",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "49057",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "50015",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "50023",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "51059",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "51087",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "51171",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "51810",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53011",
+        "value": 1,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53033",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53037",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53061",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53063",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53065",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53071",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "53073",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "55025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "55083",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "55133",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "56007",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "56013",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "56025",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "56027",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "56029",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      },
+      {
+        "countyFips": "56039",
+        "value": 0,
+        "isStateEstimate": false,
+        "asOf": "2026-07-25",
+        "source": "jhu_measles_cases"
+      }
+    ]
   }
 }

@@ -1,9 +1,10 @@
 import { queryParquet } from "./duckdb";
 import { STATE_FIPS_BY_NAME, STATE_NAME_BY_FIPS } from "./states";
 import { trendFromRelativeChange } from "./bands";
-import type { MeaslesOverviewCard, SignalSeries, StateDatum } from "./types";
+import type { MeaslesOverviewCard, SignalSeries, StateDatum, CountySeries, CountyDatum } from "./types";
 
-const BUNDLE_FILE = "bundle_measles/dist/measles_state.parquet";
+const STATE_BUNDLE_FILE = "bundle_measles/dist/measles_state.parquet";
+const COUNTY_BUNDLE_FILE = "bundle_measles/dist/measles_county.parquet";
 
 interface MeaslesRow {
   geography: string;
@@ -14,11 +15,12 @@ interface MeaslesRow {
 
 const rowCache = new Map<string, Promise<MeaslesRow[]>>();
 
-function loadRows(source: string): Promise<MeaslesRow[]> {
-  if (!rowCache.has(source)) {
+function loadRows(source: string, bundle: string = STATE_BUNDLE_FILE): Promise<MeaslesRow[]> {
+  const key = `${bundle}:${source}`;
+  if (!rowCache.has(key)) {
     rowCache.set(
-      source,
-      queryParquet<MeaslesRow>(BUNDLE_FILE, (url) =>
+      key,
+      queryParquet<MeaslesRow>(bundle, (url) =>
         `SELECT geography, CAST(date AS VARCHAR) AS date, value, source
          FROM read_parquet('${url}')
          WHERE source = '${source}'
@@ -26,7 +28,7 @@ function loadRows(source: string): Promise<MeaslesRow[]> {
       )
     );
   }
-  return rowCache.get(source)!;
+  return rowCache.get(key)!;
 }
 
 function daysAgo(iso: string, days: number): string {
@@ -120,4 +122,43 @@ export function buildMeaslesCumulativeSeries(): Promise<SignalSeries> {
     "cdc_measles_cases_nnds_cum",
     "cumulative reported cases (NNDSS, resets each January)"
   );
+}
+
+// E-009: County-level measles drill-down (E-009)
+export async function buildMeaslesCountySeries(): Promise<CountySeries> {
+  const rows = await loadRows("jhu_measles_cases", COUNTY_BUNDLE_FILE);
+  const byCounty = new Map<string, MeaslesRow[]>();
+
+  for (const r of rows) {
+    if (r.value == null) continue;
+    // Geography codes in measles_county.parquet are mostly standard county FIPS
+    const countyFips = r.geography;
+    if (countyFips.length !== 5 || !/^\d+$/.test(countyFips)) continue; // Skip non-FIPS geographies
+    if (!byCounty.has(countyFips)) byCounty.set(countyFips, []);
+    byCounty.get(countyFips)!.push(r);
+  }
+
+  const counties: CountyDatum[] = [];
+  let maxAsOf = "";
+  for (const [countyFips, list] of byCounty) {
+    list.sort((a, b) => a.date.localeCompare(b.date));
+    const latest = list[list.length - 1];
+    counties.push({
+      countyFips,
+      value: latest.value as number,
+      isStateEstimate: false,
+      asOf: latest.date,
+      source: "jhu_measles_cases",
+    });
+    if (latest.date > maxAsOf) maxAsOf = latest.date;
+  }
+
+  return {
+    disease: "measles",
+    signal: "jhu_measles_cases",
+    source: "jhu_measles_cases",
+    unit: "reported cases (weekly)",
+    asOf: maxAsOf,
+    counties,
+  };
 }
