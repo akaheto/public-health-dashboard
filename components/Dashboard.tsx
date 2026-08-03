@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Choropleth, type MapDatum } from "./Choropleth";
 import { OverviewStrip } from "./OverviewStrip";
 import { ChronicDiseasePanel, type ChronicDiseasePanelProps } from "./ChronicDiseasePanel";
@@ -106,6 +106,33 @@ const VACCINE_SOURCE_LABEL: Record<string, string> = {
   combined7Nis: "CDC NIS",
 };
 
+// E-002: Per-disease signal defaults (localStorage key: "disease_signal_defaults")
+function getDefaultSignal(disease: RespiratoryDisease): Signal {
+  if (typeof window === "undefined") return "CDC NSSP";
+  const saved = localStorage.getItem("disease_signal_defaults");
+  if (saved) {
+    const defaults = JSON.parse(saved) as Record<string, Signal>;
+    if (defaults[disease]) return defaults[disease];
+  }
+  return "CDC NSSP"; // global default
+}
+
+function saveSignalDefault(disease: RespiratoryDisease, signal: Signal) {
+  if (typeof window === "undefined") return;
+  const saved = localStorage.getItem("disease_signal_defaults") || "{}";
+  const defaults = JSON.parse(saved) as Record<string, Signal>;
+  defaults[disease] = signal;
+  localStorage.setItem("disease_signal_defaults", JSON.stringify(defaults));
+}
+
+// E-013: Touch-target sizing (WCAG AA 44x44px minimum)
+const touchTargetStyle = {
+  minHeight: "44px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+} as const;
+
 function seriesToMapData(series: SignalSeries): Record<string, MapDatum> {
   const out: Record<string, MapDatum> = {};
   for (const s of series.states) {
@@ -150,6 +177,56 @@ export function Dashboard({
   const [mmrSource, setMmrSource] = useState<MmrSource>("mmrHealthmap");
   const [counties, setCounties] = useState<DashboardProps["counties"]>(initialCounties);
   const [loadingCounties, setLoadingCounties] = useState(false);
+  const [showSignalStar, setShowSignalStar] = useState(false); // E-002: show "set as default" indicator
+  const [levelChanges, setLevelChanges] = useState<Array<{ disease: Disease; oldLevel?: string; newLevel: string; timestamp: number }>>([]);
+
+  // E-002: Load saved signal default on mount
+  useEffect(() => {
+    const defaultSignal = getDefaultSignal(disease as RespiratoryDisease);
+    setRespiratorySignal(defaultSignal);
+  }, []);
+
+  // E-002: Check if current signal differs from saved default
+  useEffect(() => {
+    if (disease !== "measles") {
+      const savedDefault = getDefaultSignal(disease as RespiratoryDisease);
+      setShowSignalStar(respiratorySignal !== savedDefault);
+    }
+  }, [disease, respiratorySignal]);
+
+  // E-005: Track level changes across all diseases
+  useEffect(() => {
+    const checkLevelChanges = () => {
+      const currentLevels = {
+        flu: overview.flu.level,
+        covid: overview.covid.level,
+        rsv: overview.rsv.level,
+      };
+
+      const saved = localStorage.getItem("disease_levels") || "{}";
+      const previousLevels = JSON.parse(saved) as Record<string, string>;
+
+      const changes: Array<{ disease: Disease; oldLevel?: string; newLevel: string; timestamp: number }> = [];
+      Object.entries(currentLevels).forEach(([disease, level]) => {
+        const oldLevel = previousLevels[disease];
+        if (oldLevel && oldLevel !== level) {
+          changes.push({
+            disease: disease as RespiratoryDisease,
+            oldLevel,
+            newLevel: level,
+            timestamp: Date.now(),
+          });
+        }
+      });
+
+      if (changes.length > 0) {
+        setLevelChanges(prev => [...changes, ...prev].slice(0, 5)); // Keep last 5
+        localStorage.setItem("disease_levels", JSON.stringify(currentLevels));
+      }
+    };
+
+    checkLevelChanges();
+  }, [overview.flu.level, overview.covid.level, overview.rsv.level]);
 
   const isMeasles = disease === "measles";
   const canDrillDown = true; // E-009: measles now supports county-level drill-down
@@ -207,6 +284,11 @@ export function Dashboard({
   function handleSelectDisease(next: Disease) {
     setDisease(next);
     setDrilldown(null);
+    // E-002: Load saved signal default for this disease
+    if (next !== "measles") {
+      const savedSignal = getDefaultSignal(next as RespiratoryDisease);
+      setRespiratorySignal(savedSignal);
+    }
     // E-009: measles now supports drill-down like respiratory diseases
   }
 
@@ -231,13 +313,40 @@ export function Dashboard({
 
   return (
     <div className="flex flex-col gap-6">
+      {/* E-005: Level change notifications */}
+      {levelChanges.length > 0 && mainTab === "outbreak" && (
+        <div
+          className="rounded-lg border p-4"
+          style={{
+            borderColor: "var(--color-border-default)",
+            background: "var(--color-bg-surface)",
+          }}
+        >
+          <h3 className="text-sm font-semibold mb-2" style={{ color: "var(--color-text-primary)" }}>
+            ⚠️ Disease Level Changes
+          </h3>
+          <div className="space-y-1 text-xs" style={{ color: "var(--color-text-secondary)" }}>
+            {levelChanges.slice(0, 3).map((change, idx) => (
+              <div key={idx}>
+                <strong>{DISEASE_LABEL[change.disease]}</strong>: {change.oldLevel} → <strong style={{ color: "var(--color-text-primary)" }}>{change.newLevel}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="flex gap-1 rounded-lg border p-1 self-start" style={{ borderColor: "var(--color-border-default)" }}>
         <button
           onClick={() => setMainTab("outbreak")}
-          className="rounded-md px-3 py-1.5 text-sm font-medium"
+          className="rounded-md px-3 font-medium"
           style={{
             background: mainTab === "outbreak" ? "var(--color-focus)" : "transparent",
             color: mainTab === "outbreak" ? "white" : "var(--color-text-secondary)",
+            padding: "10px 12px", // E-013: 44px min height
+            fontSize: "14px",
+            minHeight: "44px",
+            display: "flex",
+            alignItems: "center",
           }}
         >
           Outbreak Tracker
@@ -245,10 +354,11 @@ export function Dashboard({
         <button
           onClick={() => setMainTab("chronic")}
           disabled={!chronic.diabetes}
-          className="rounded-md px-3 py-1.5 text-sm font-medium disabled:opacity-40"
+          className="rounded-md px-3 font-medium disabled:opacity-40"
           style={{
             background: mainTab === "chronic" ? "var(--color-focus)" : "transparent",
             color: mainTab === "chronic" ? "white" : "var(--color-text-secondary)",
+            ...touchTargetStyle,
           }}
           title={!chronic.diabetes ? "Data unavailable" : undefined}
         >
@@ -256,10 +366,11 @@ export function Dashboard({
         </button>
         <button
           onClick={() => setMainTab("cdc")}
-          className="rounded-md px-3 py-1.5 text-sm font-medium"
+          className="rounded-md px-3 font-medium"
           style={{
             background: mainTab === "cdc" ? "var(--color-focus)" : "transparent",
             color: mainTab === "cdc" ? "white" : "var(--color-text-secondary)",
+            ...touchTargetStyle,
           }}
         >
           CDC Dashboard
@@ -331,10 +442,11 @@ export function Dashboard({
             <button
               key={d}
               onClick={() => handleSelectDisease(d)}
-              className="rounded-md px-3 py-1.5 text-sm font-medium"
+              className="rounded-md px-3 text-sm font-medium"
               style={{
                 background: disease === d ? "var(--color-focus)" : "transparent",
                 color: disease === d ? "white" : "var(--color-text-secondary)",
+                ...touchTargetStyle,
               }}
             >
               {DISEASE_LABEL[d]}
@@ -343,45 +455,67 @@ export function Dashboard({
         </div>
 
         {!isMeasles ? (
-          <select
-            value={respiratorySignal}
-            onChange={(e) => setRespiratorySignal(e.target.value as Signal)}
-            className="rounded-lg border px-3 py-1.5 text-sm font-medium"
-            style={{
-              borderColor: "var(--color-border-default)",
-              background: "var(--color-bg-surface)",
-              color: "var(--color-text-primary)",
-            }}
-          >
-            <optgroup label="Syndromic surveillance">
-              {SIGNAL_GROUPS.syndromic.map((s) => (
-                <option key={s} value={s}>
-                  {SIGNAL_LABEL[s]}
-                </option>
-              ))}
-            </optgroup>
-            <optgroup label="Medical claims">
-              {SIGNAL_GROUPS.medical.map((s) => (
-                <option key={s} value={s}>
-                  {SIGNAL_LABEL[s]}
-                </option>
-              ))}
-            </optgroup>
-            <optgroup label="Behavioral signals">
-              {SIGNAL_GROUPS.behavioral.map((s) => (
-                <option key={s} value={s}>
-                  {SIGNAL_LABEL[s]}
-                </option>
-              ))}
-            </optgroup>
-          </select>
+          <div className="flex gap-1 items-center">
+            <select
+              value={respiratorySignal}
+              onChange={(e) => setRespiratorySignal(e.target.value as Signal)}
+              className="rounded-lg border px-3 text-sm font-medium"
+              style={{
+                borderColor: "var(--color-border-default)",
+                background: "var(--color-bg-surface)",
+                color: "var(--color-text-primary)",
+                minHeight: "44px",
+                padding: "10px 12px",
+              }}
+            >
+              <optgroup label="Syndromic surveillance">
+                {SIGNAL_GROUPS.syndromic.map((s) => (
+                  <option key={s} value={s}>
+                    {SIGNAL_LABEL[s]}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="Medical claims">
+                {SIGNAL_GROUPS.medical.map((s) => (
+                  <option key={s} value={s}>
+                    {SIGNAL_LABEL[s]}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="Behavioral signals">
+                {SIGNAL_GROUPS.behavioral.map((s) => (
+                  <option key={s} value={s}>
+                    {SIGNAL_LABEL[s]}
+                  </option>
+                ))}
+              </optgroup>
+            </select>
+            {/* E-002: Set as default for this disease */}
+            <button
+              onClick={() => {
+                saveSignalDefault(disease as RespiratoryDisease, respiratorySignal);
+                setShowSignalStar(false);
+              }}
+              title={`Set ${SIGNAL_LABEL[respiratorySignal]} as default for ${DISEASE_LABEL[disease]}`}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: showSignalStar ? "var(--color-focus)" : "var(--color-text-muted)",
+                cursor: "pointer",
+                fontSize: "18px",
+                padding: "0.25rem",
+              }}
+            >
+              {showSignalStar ? "★" : "☆"}
+            </button>
+          </div>
         ) : (
           <div className="flex gap-1 rounded-lg border p-1" style={{ borderColor: "var(--color-border-default)" }}>
             {MEASLES_SIGNALS.map((s) => (
               <button
                 key={s}
                 onClick={() => setMeaslesSignal(s)}
-                className="rounded-md px-3 py-1.5 text-sm font-medium"
+                className="rounded-md px-3 text-sm font-medium"
                 style={{
                   background: measlesSignal === s ? "var(--color-bg-page)" : "transparent",
                   color: "var(--color-text-secondary)",
@@ -389,6 +523,7 @@ export function Dashboard({
                     measlesSignal === s
                       ? "1px solid var(--color-border-default)"
                       : "1px solid transparent",
+                  ...touchTargetStyle,
                 }}
               >
                 {SIGNAL_LABEL[s]}
@@ -399,11 +534,12 @@ export function Dashboard({
 
         <button
           onClick={handleToggleTriState}
-          className="rounded-lg border px-3 py-1.5 text-sm font-medium"
+          className="rounded-lg border px-3 text-sm font-medium"
           style={{
             borderColor: "var(--color-border-default)",
             background: triStateView ? "var(--color-focus)" : "transparent",
             color: triStateView ? "white" : "var(--color-text-secondary)",
+            ...touchTargetStyle,
           }}
         >
           Tri-State + NYC
@@ -473,7 +609,7 @@ export function Dashboard({
                 <button
                   key={v.id}
                   onClick={() => setVaccineType(v.id)}
-                  className="rounded-md px-2.5 py-1 text-xs font-medium"
+                  className="rounded-md px-2.5 text-xs font-medium"
                   style={{
                     background: vaccineType === v.id ? "var(--color-bg-page)" : "transparent",
                     color: "var(--color-text-secondary)",
@@ -481,6 +617,7 @@ export function Dashboard({
                       vaccineType === v.id
                         ? "1px solid var(--color-border-default)"
                         : "1px solid transparent",
+                    ...touchTargetStyle,
                   }}
                 >
                   {v.label}
@@ -493,7 +630,7 @@ export function Dashboard({
                   <button
                     key={s}
                     onClick={() => setMmrSource(s)}
-                    className="rounded-md px-2 py-1 text-xs font-medium"
+                    className="rounded-md px-2 text-xs font-medium"
                     style={{
                       background: mmrSource === s ? "var(--color-bg-page)" : "transparent",
                       color: "var(--color-text-secondary)",
@@ -501,6 +638,7 @@ export function Dashboard({
                         mmrSource === s
                           ? "1px solid var(--color-border-default)"
                           : "1px solid transparent",
+                      ...touchTargetStyle,
                     }}
                   >
                     {MMR_SOURCE_LABEL[s]}
